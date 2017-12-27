@@ -1,0 +1,19 @@
+/* some style */
+
+.matrix {
+  border: 1px solid #000;
+}
+
+.matrix-row {
+  border: 0px;
+}
+
+.matrix-row-cell {
+  border: 1px solid #FFF;
+  background: #CCC;
+  display: inline-block;
+}
+
+.matrix-row-cell-painted {
+  background: #000;
+}
