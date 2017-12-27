@@ -1,4 +1,4 @@
-(defproject pattern "0.1.0"
+(defproject cljs-pattern-draw "0.1.0"
   :description "A tool to draw some patterns in the browser"
   :url "https://github.com/jptannus/cljs-pattern-draw"
   :license {:name "MIT"
