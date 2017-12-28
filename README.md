@@ -1,4 +1,5 @@
 # ClojureScript - Pattern Draw
+[![CircleCI](https://circleci.com/gh/jptannus/cljs-pattern-draw/tree/master.svg?style=svg)](https://circleci.com/gh/jptannus/cljs-pattern-draw/tree/master)
 
 A tool to draw some patterns in the browser.
 
