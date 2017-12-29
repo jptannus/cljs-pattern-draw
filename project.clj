@@ -10,15 +10,25 @@
                  [org.clojure/clojurescript "1.9.908"]
                  [org.clojure/core.async  "0.3.443"]
                  [reagent "0.7.0"]
-                 [deraen/lein-sass4clj "0.3.1"]]
+                 [deraen/lein-sass4clj "0.3.1"]
+                 [lein-doo "0.1.8"]]
 
   :plugins [[lein-figwheel "0.5.13"]
+            [lein-doo "0.1.8"]
             [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]]
 
-  :source-paths ["src"]
+  :source-paths ["src" "test"]
 
   :cljsbuild {:builds
-              [{:id "dev"
+              [{:id "test"
+                :source-paths ["src" "test"]
+                :compiler {:main pattern.core-test
+                           :asset-path "resources/test/compiled/out"
+                           :output-to "resources/test/compiled/compiled.js"
+                           :output-dir "resources/test/compiled/out"
+                           :optimizations :none
+                           :source-map-timestamp true}}
+               {:id "dev"
                 :source-paths ["src"]
 
                 ;; The presence of a :figwheel configuration here
@@ -102,4 +112,6 @@
                    :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
                    ;; need to add the compliled assets to the :clean-targets
                    :clean-targets ^{:protect false} ["resources/public/js/compiled"
-                                                     :target-path]}})
+                                                     :target-path]}
+             :test {:clean-targets ^{:protect false} ["resources/test/compiled"
+                                                      :target-path]}})
