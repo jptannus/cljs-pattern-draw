@@ -1,4 +1,6 @@
 # ClojureScript - Pattern Draw
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/jptannus/cljs-pattern-draw.svg?columns=all)](https://waffle.io/jptannus/cljs-pattern-draw) 
+
 [![CircleCI](https://circleci.com/gh/jptannus/cljs-pattern-draw/tree/master.svg?style=svg)](https://circleci.com/gh/jptannus/cljs-pattern-draw/tree/master)
 
 A tool to draw some patterns in the browser.
